@@ -37,8 +37,8 @@ syntax  match  TodoPriorityX  '^(X)\s.\+$'               contains=TodoDate,TodoP
 syntax  match  TodoPriorityY  '^(Y)\s.\+$'               contains=TodoDate,TodoProject,TodoContext
 syntax  match  TodoPriorityZ  '^(Z)\s.\+$'               contains=TodoDate,TodoProject,TodoContext
 syntax  match  TodoDate       '\d\{4\}-\d\{2\}-\d\{2\}'  contains=NONE
-syntax  match  TodoProject    '+[^\S]\+\w'               contains=NONE
-syntax  match  TodoContext    '@[^\S]\+\w'               contains=NONE
+syntax  match  TodoProject    '[^\s]+\S\+\w'             contains=NONE
+syntax  match  TodoContext    '[^\s]@\S\+\w'             contains=NONE
 
 " Other priority colours might be defined by the user
 highlight  default  link  TodoDone       Comment
